@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Print Template (A4)</title>
+</head>
+<body>
+
+    <!-- Control panel for screen only (hidden during printing) -->
+    <div class="control-panel no-print">
+        <label for="fileInput">Upload QR Code:</label>
+        <input type="file" id="fileInput" class="file-input" accept="image/*">
+
+        <label for="countSelect">QR Codes per page:</label>
+        <select id="countSelect">
+            <option value="20">20 codes</option>
+            <option value="30" selected>30 codes</option>
+            <option value="40">40 codes</option>
+            <option value="100">100 codes</option>
+            <option value="400">400 codes (Micro)</option>
+        </select>
+
+        <button id="printBtn">Print Sheet</button>
+    </div>
+
+    <!-- A4 Sheet Container -->
+    <div class="a4-sheet" id="qrContainer">
+        <!-- QR codes will be dynamically injected here by JavaScript -->
+    </div>
+
+</body>
+<link rel="stylesheet" href="../css/style.css">
+<script type="text/javascript" src="../js/script.js"></script>
+</html>
